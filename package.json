@@ -5,7 +5,7 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass src/sass/main.scss public/css/style.css",
+    "compile:sass": "node-sass src/sass/main.scss public/css/style.css -w",
     "predeploy": "npm run compile:sass",
     "deploy": "gh-pages -d public"
   },
