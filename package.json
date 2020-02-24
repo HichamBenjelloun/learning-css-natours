@@ -5,8 +5,9 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass src/sass/main.scss public/css/style.css -w",
-    "predeploy": "npm run compile:sass",
+    "watch": "node-sass src/sass/main.scss public/css/style.css -w",
+    "build": "node-sass src/sass/main.scss public/css/style.css",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d public"
   },
   "author": "Hicham Benjelloun",
