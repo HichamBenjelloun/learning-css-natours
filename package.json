@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "node-sass src/sass/main.scss public/css/style.css -w",
-    "build": "node-sass src/sass/main.scss public/css/style.css",
+    "build": "node-sass --output-style=compressed src/sass/main.scss public/css/style.css",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d public"
   },
