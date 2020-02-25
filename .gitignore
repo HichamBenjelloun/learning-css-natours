@@ -93,6 +93,7 @@ dist
 
 # CSS output
 public/css/style.css
+public/css/style.css.map
 
 # Serverless directories
 .serverless/
