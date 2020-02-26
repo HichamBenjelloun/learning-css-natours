@@ -9,25 +9,39 @@
   transform: skew(-12deg);
   background-color: rgba($color-white, .6);
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skew(0);
+  }
+
   &__shape {
     border: none;
 
     width: 15rem;
     height: 15rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
-
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skew(0);
+    }
   }
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skew(0);
+    }
   }
 
   &__img {
