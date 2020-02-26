@@ -6,6 +6,8 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass src/sass/main.scss public/css/style.css -w",
+    "devserver": "live-server public",
+    "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass src/sass/main.scss public/css/style.comp.css",
     "concat:css": "concat -o public/css/style.concat.css public/css/icon-font.css public/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.concat.css -o public/css/style.prefix.css",
